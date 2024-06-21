@@ -19,7 +19,7 @@ const BlogPage = () => {
   }
 
   return (
-    <div className="flex flex-wrap gap-1 mb-3 mx-4 justify-around ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
       {blogState.blogList.map((blog) => (
         <BlogCard key={blog.id} blog={blog} />
       ))}

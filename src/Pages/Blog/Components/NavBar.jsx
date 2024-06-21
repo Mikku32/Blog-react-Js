@@ -61,6 +61,8 @@ const NavBar = () => {
                       })
                     );
                     await dispatch(getBlogs());
+
+                    onClose();
                   }}
                 >
                   <Input label="Title" id="title" name="title" />
