@@ -1,4 +1,4 @@
-import React from "react";
+import Proptypes from "prop-types";
 
 const BlogCard = ({ blog }) => {
   return (
@@ -16,4 +16,12 @@ const BlogCard = ({ blog }) => {
   );
 };
 
+BlogCard.propTypes = {
+  blog: {
+    title: Proptypes.string,
+    content: Proptypes.string,
+    author: Proptypes.string,
+    id: Proptypes.number,
+  },
+};
 export default BlogCard;

@@ -1,5 +1,3 @@
-import React from "react";
-
 import NavBar from "./Pages/Blog/Components/NavBar";
 import BlogPage from "./Pages/Blog/BlogPAge";
 

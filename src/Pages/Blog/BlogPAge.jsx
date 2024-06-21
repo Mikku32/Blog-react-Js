@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import BlogCard from "./Components/BlogCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getBlogs } from "../../redux/slices/blogSlice";
@@ -9,7 +9,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     dispatch(getBlogs());
-  }, []);
+  }, [dispatch]);
   if (blogState.isLoading) {
     return <div>Loading...</div>;
   }
