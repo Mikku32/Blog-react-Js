@@ -24,9 +24,6 @@ const NavBar = () => {
           </span>
         </a>
         <div className="flex gap-3">
-          <Button color="primary" variant="ghost">
-            Blog
-          </Button>
           <Button
             color="primary"
             variant="ghost"

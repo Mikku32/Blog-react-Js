@@ -13,10 +13,10 @@
       "author": "Alice Johnson"
     },
     {
-      "id": "4",
       "title": "Advanced Techniques in Structural Graph Coverage",
       "content": "Advanced techniques in structural graph coverage include leveraging call graphs to map out method interactions, identify critical paths, and ensure comprehensive coverage of method calls.",
-      "author": "Bob Brown"
+      "author": "Bob Brown",
+      "id": "4"
     },
     {
       "id": "5",
@@ -53,6 +53,30 @@
       "title": "Call Graphs in Agile Development",
       "content": "In Agile development, call graphs can be used to ensure continuous integration and testing. This blog discusses the role of call graphs in Agile methodologies and their benefits in iterative development.",
       "author": "Henry King"
+    },
+    {
+      "title": "The Rise of House Targaryen",
+      "content": "An in-depth look at the history of House Targaryen, from Aegon's Conquest to the Dance of the Dragons. This blog explores the key events, characters, and dragons that shaped the legacy of one of the most powerful families in Westeros.",
+      "author": "Maester Aemon",
+      "id": "a9f3c7e2"
+    },
+    {
+      "title": "Dragons of Westeros: A Legacy of Fire and Blood",
+      "content": "This blog delves into the mythical creatures that have dominated Westerosi lore, examining the significance of dragons in Targaryen rule and their impact on the Seven Kingdoms. From Balerion the Black Dread to Drogon, we cover the dragons' storied past.",
+      "author": "Archmaester Marwyn",
+      "id": "b2d5f8h6"
+    },
+    {
+      "title": "The Fall of Harrenhal: A Tale of Fire and Fate",
+      "content": "Explore the haunting history of Harrenhal, from its construction to its fiery destruction by Aegon the Conqueror. This blog uncovers the stories of the castle's cursed legacy and its significance in the larger narrative of Westeros.",
+      "author": "Viserys Targaryen",
+      "id": "c1e4g9k3"
+    },
+    {
+      "title": "The Dance of the Dragons: Civil War in the Targaryen Dynasty",
+      "content": "An analysis of the Targaryen civil war known as the Dance of the Dragons, this blog provides insights into the causes, key battles, and outcomes of the conflict that nearly tore the realm apart. Discover the heroes and villains of this pivotal era.",
+      "author": "Princess Rhaenyra",
+      "id": "d7k8m1p4"
     }
   ]
 }
