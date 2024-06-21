@@ -1,13 +1,15 @@
 import React from "react";
 
-import NavBar from "./Pages/Components/NavBar";
-import BlogPage from "./Pages/BlogPAge";
+import NavBar from "./Pages/Blog/Components/NavBar";
+import BlogPage from "./Pages/Blog/BlogPAge";
 
 const App = () => {
   return (
     <>
-      <NavBar />
-      <BlogPage />
+      <div className="bg-gray-100 dark:bg-gray-900 min-h-screen">
+        <NavBar />
+        <BlogPage />
+      </div>
     </>
   );
 };
