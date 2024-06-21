@@ -1,70 +1,58 @@
 {
   "Blog": [
     {
-      "id": 1,
-      "title": "Understanding Call Graphs in Structural Testing",
-      "content": "The call graph is the most commonly used type of structural graph in which testing begins with creating a graph that represents the couplings between software components. In a call graph, nodes represent methods or units, and edges represent the calls between these methods.",
-      "author": "John Doe"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "title": "Benefits of Using Call Graphs for Software Testing",
       "content": "Call graphs provide a visual representation of the software’s architecture by illustrating method interactions and dependencies, thus aiding in identifying critical paths and ensuring comprehensive testing of all method calls within the system.",
       "author": "Jane Smith"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "How to Create Effective Call Graphs",
       "content": "Creating effective call graphs involves accurately representing methods and their interactions. This helps testers and developers understand the flow of method calls and identify potential bottlenecks and dependencies.",
       "author": "Alice Johnson"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Advanced Techniques in Structural Graph Coverage",
       "content": "Advanced techniques in structural graph coverage include leveraging call graphs to map out method interactions, identify critical paths, and ensure comprehensive coverage of method calls.",
       "author": "Bob Brown"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Case Study: Improving Software Quality with Call Graphs",
       "content": "This case study explores how a software development team improved their software quality by using call graphs to identify and address critical interactions and dependencies within their system.",
       "author": "Carol Davis"
     },
     {
-      "id": 6,
+      "id": " 6",
       "title": "Common Pitfalls in Creating Call Graphs",
       "content": "Avoiding common pitfalls in creating call graphs is crucial for accurate representation. This blog discusses the common mistakes made and how to avoid them to ensure the call graph is useful and accurate.",
       "author": "David Clark"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Using Call Graphs in Performance Optimization",
       "content": "Call graphs can be instrumental in performance optimization by highlighting method calls that are critical to performance. This blog covers strategies for using call graphs to optimize software performance.",
       "author": "Eve White"
     },
     {
-      "id": 8,
+      "id": " 8",
       "title": "Integrating Call Graphs with Other Testing Tools",
       "content": "Integrating call graphs with other testing tools can provide a more comprehensive testing framework. This blog explores different tools that can be used in conjunction with call graphs for enhanced testing.",
       "author": "Frank Green"
     },
     {
-      "id": 9,
-      "title": "Historical Perspective: Evolution of Call Graphs",
+      "title": "Blacks v/s Green : The dance of Dragon",
       "content": "This blog provides a historical perspective on the evolution of call graphs, from their inception to modern-day applications, and how they have transformed software testing practices.",
-      "author": "Grace Hall"
+      "author": "Deamon Targariyan",
+      "id": "9"
     },
     {
-      "id": 10,
+      "id": " 10",
       "title": "Call Graphs in Agile Development",
       "content": "In Agile development, call graphs can be used to ensure continuous integration and testing. This blog discusses the role of call graphs in Agile methodologies and their benefits in iterative development.",
       "author": "Henry King"
-    },
-    {
-      "id": "3ef4",
-      "title": "Test 4",
-      "content": "Just testing ,  couplings between software components. These structural graphs are essential for understanding the relationships and interactions within the system, ensuring thorough testing of all paths and connections.  The most common graph used for structural design coverage is the call graph. In a call graph, the nodes represent methods (or units), and the edges represent method calls. This graph provides a visual representation of the software’s architecture by showing how different methods interact with each other, which methods invoke others, and the overall structure of method dependencies within the software.",
-      "author": "Cena"
     }
   ]
 }

@@ -26,6 +26,15 @@ export const deleteBlog = createAsyncThunk("blog/deleteBlog", async (id) => {
   return response.data;
 });
 
+//update
+export const updateBlog = createAsyncThunk("blog/updateBlog", async (data) => {
+  const response = await axios.put(
+    `http://localhost:3000/Blog/${data.id}`,
+    data
+  );
+  return response.data;
+});
+
 const blogslice = createSlice({
   name: "blog",
   initialState,
@@ -64,6 +73,18 @@ const blogslice = createSlice({
         state.isLoading = false;
       })
       .addCase(deleteBlog.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.errorMessage = action.error.message;
+      })
+
+      .addCase(updateBlog.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(updateBlog.fulfilled, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(updateBlog.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.errorMessage = action.error.message;
