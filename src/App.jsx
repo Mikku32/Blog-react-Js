@@ -4,7 +4,7 @@ import BlogPage from "./Pages/Blog/BlogPAge";
 const App = () => {
   return (
     <>
-      <div className="bg-gray-100 dark:bg-gray-900 min-h-screen">
+      <div className="bg-gray-100 dark:bg-gray-900 min-h-screen  ">
         <NavBar />
         <BlogPage />
       </div>

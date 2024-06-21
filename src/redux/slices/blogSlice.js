@@ -10,9 +10,18 @@ const initialState = {
 
 export const getBlogs = createAsyncThunk("blog/getBlogs", async () => {
   const response = await axios.get("http://localhost:3000/Blog");
-
   return response.data;
 });
+
+export const postBlog = createAsyncThunk("blog/postBlog", async (data) => {
+  const response = await axios.post("http://localhost:3000/Blog", data);
+  return response.data;
+});
+
+// export const deleteBlog = createAsyncThunk("blog/deleteBlog", async (id) => {
+//   const response = await axios.delete(`http://localhost:3000/Blog/${id}`);
+//   return response.data;
+// });
 
 const blogslice = createSlice({
   name: "blog",
@@ -25,13 +34,37 @@ const blogslice = createSlice({
       })
       .addCase(getBlogs.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.blogList = action.payload;
+        state.blogList = action.payload.slice().reverse();
       })
       .addCase(getBlogs.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.errorMessage = action.error.message;
+      })
+
+      .addCase(postBlog.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(postBlog.fulfilled, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(postBlog.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.errorMessage = action.error.message;
       });
+
+    //   .addCase(deleteBlog.pending, (state) => {
+    //     state.isLoading = true;
+    //   })
+    //   .addCase(deleteBlog.fulfilled, (state) => {
+    //     state.isLoading = false;
+    //   })
+    //   .addCase(deleteBlog.rejected, (state, action) => {
+    //     state.isLoading = false;
+    //     state.isError = true;
+    //     state.errorMessage = action.error.message;
+    //   });
   },
 });
 

@@ -1,4 +1,5 @@
 import { Button } from "@nextui-org/button";
+import { Input } from "@nextui-org/input";
 import {
   Modal,
   ModalBody,
@@ -7,9 +8,12 @@ import {
   ModalHeader,
 } from "@nextui-org/modal";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getBlogs, postBlog } from "../../../redux/slices/blogSlice";
 
 const NavBar = () => {
   const [isOpen, setOpenModal] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
@@ -40,31 +44,36 @@ const NavBar = () => {
                 Add Blog
               </ModalHeader>
               <ModalBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Magna exercitation reprehenderit magna aute tempor cupidatat
-                  consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex
-                  incididunt cillum quis. Velit duis sit officia eiusmod Lorem
-                  aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                  nisi consectetur esse laborum eiusmod pariatur proident Lorem
-                  eiusmod et. Culpa deserunt nostrud ad veniam.
-                </p>
+                <form
+                  className="flex flex-col gap-3"
+                  id="add-blog"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const title = e.target.title.value;
+                    const content = e.target.content.value;
+                    const author = e.target.author.value;
+
+                    await dispatch(
+                      postBlog({
+                        title: title,
+                        content: content,
+                        author: author,
+                      })
+                    );
+                    await dispatch(getBlogs());
+                  }}
+                >
+                  <Input label="Title" id="title" name="title" />
+                  <Input label="Content" id="content" name="content" />
+                  <Input label="Author" id="author" name="author" />
+                </form>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
+                <Button color="primary" form="add-blog" type="submit">
+                  Post
                 </Button>
               </ModalFooter>
             </>
