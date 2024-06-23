@@ -17,6 +17,7 @@ import {
 
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
+import { toast } from "sonner";
 
 const BlogCard = ({ blog }) => {
   const dispatch = useDispatch();
@@ -77,16 +78,20 @@ const BlogCard = ({ blog }) => {
                     const content = e.target.content.value;
                     const author = e.target.author.value;
 
-                    await dispatch(
-                      updateBlog({
-                        title: title,
-                        content: content,
-                        author: author,
-                        id: blog.id,
-                      })
-                    );
-                    await dispatch(getBlogs());
-
+                    try {
+                      await dispatch(
+                        updateBlog({
+                          title: title,
+                          content: content,
+                          author: author,
+                          id: blog.id,
+                        })
+                      ).unwrap();
+                      await dispatch(getBlogs());
+                      toast.success("WooHoo.. Updated");
+                    } catch (error) {
+                      toast.error("Something went wrong");
+                    }
                     onClose();
                   }}
                 >
@@ -115,7 +120,7 @@ const BlogCard = ({ blog }) => {
                   Close
                 </Button>
                 <Button color="primary" form="edit-blog" type="submit">
-                  Post
+                  Update Blog
                 </Button>
               </ModalFooter>
             </>

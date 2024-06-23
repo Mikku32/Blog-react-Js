@@ -10,16 +10,17 @@ const BlogPage = () => {
   useEffect(() => {
     dispatch(getBlogs());
   }, [dispatch]);
+
   if (blogState.isLoading) {
     return <div>Loading...</div>;
   }
 
   if (blogState.isError) {
-    return <div>{blogState.errorMessage}</div>;
+    return <div>Something went wrong: {blogState.errorMessage}</div>;
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    <div className=" mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
       {blogState.blogList.map((blog) => (
         <BlogCard key={blog.id} blog={blog} />
       ))}

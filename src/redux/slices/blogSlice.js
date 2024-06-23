@@ -28,7 +28,7 @@ export const deleteBlog = createAsyncThunk("blog/deleteBlog", async (id) => {
 
 //update
 export const updateBlog = createAsyncThunk("blog/updateBlog", async (data) => {
-  const response = await axios.put(
+  const response = await axios.patch(
     `http://localhost:3000/Blog/${data.id}`,
     data
   );
@@ -41,6 +41,8 @@ const blogslice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+
+      //Get_blog states
       .addCase(getBlogs.pending, (state) => {
         state.isLoading = true;
       })
@@ -54,6 +56,8 @@ const blogslice = createSlice({
         state.errorMessage = action.error.message;
       })
 
+      //Post_blog States
+
       .addCase(postBlog.pending, (state) => {
         state.isLoading = true;
       })
@@ -65,6 +69,8 @@ const blogslice = createSlice({
         state.isError = true;
         state.errorMessage = action.error.message;
       })
+
+      //Delete_blog states
 
       .addCase(deleteBlog.pending, (state) => {
         state.isLoading = true;
@@ -78,6 +84,7 @@ const blogslice = createSlice({
         state.errorMessage = action.error.message;
       })
 
+      //Update_blog states
       .addCase(updateBlog.pending, (state) => {
         state.isLoading = true;
       })
@@ -93,3 +100,5 @@ const blogslice = createSlice({
 });
 
 export default blogslice.reducer;
+
+// const initialState =
