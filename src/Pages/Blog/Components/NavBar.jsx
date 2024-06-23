@@ -68,9 +68,27 @@ const NavBar = () => {
                     onClose();
                   }}
                 >
-                  <Input label="Title" id="title" name="title" />
-                  <Input label="Content" id="content" name="content" />
-                  <Input label="Author" id="author" name="author" />
+                  <Input
+                    isRequired
+                    labelPlacement="outside"
+                    label="Title"
+                    id="title"
+                    name="title"
+                  />
+                  <Input
+                    isRequired
+                    labelPlacement="outside"
+                    label="Content"
+                    id="content"
+                    name="content"
+                  />
+                  <Input
+                    isRequired
+                    labelPlacement="outside"
+                    label="Author"
+                    id="author"
+                    name="author"
+                  />
                 </form>
               </ModalBody>
               <ModalFooter>
