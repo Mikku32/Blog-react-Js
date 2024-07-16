@@ -1,5 +1,5 @@
-import NavBar from "./Pages/Blog/Components/NavBar";
-import BlogPage from "./Pages/Blog/BlogPAge";
+import NavBar from "./Pages/Components/NavBar";
+import BlogPage from "./Pages/BlogPAge";
 import { Toaster } from "sonner";
 
 const App = () => {

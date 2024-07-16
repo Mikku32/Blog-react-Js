@@ -9,7 +9,7 @@ import {
 } from "@nextui-org/modal";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getBlogs, postBlog } from "../../../redux/slices/blogSlice";
+import { getBlogs, postBlog } from "../../redux/slices/blogSlice";
 import { toast } from "sonner";
 
 const NavBar = () => {

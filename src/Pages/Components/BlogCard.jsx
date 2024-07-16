@@ -2,11 +2,7 @@ import { Button } from "@nextui-org/button";
 import PropTypes from "prop-types";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import {
-  deleteBlog,
-  getBlogs,
-  updateBlog,
-} from "../../../redux/slices/blogSlice";
+import { deleteBlog, getBlogs, updateBlog } from "../../redux/slices/blogSlice";
 import {
   Modal,
   ModalBody,

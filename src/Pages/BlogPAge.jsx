@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import BlogCard from "./Components/BlogCard";
 import { useDispatch, useSelector } from "react-redux";
-import { getBlogs } from "../../redux/slices/blogSlice";
+import { getBlogs } from "../redux/slices/blogSlice";
 
 const BlogPage = () => {
   const dispatch = useDispatch();
